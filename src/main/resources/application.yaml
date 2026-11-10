@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: climora-backend
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/climora_dev
+    username: postgres
+    password: postgres
+
