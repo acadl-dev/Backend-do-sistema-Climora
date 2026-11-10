@@ -12,12 +12,12 @@ Cada aparelho do cliente recebe uma etiqueta com QR Code. O técnico registra o 
 
 | Camada | Tecnologia |
 |---|---|
-| Linguagem | Java |
+| Linguagem | Java 27 |
 | Framework | Spring Boot 4 |
 | Segurança | Spring Security 7 |
 | Modularidade | Spring Modulith 2 |
 | Persistência | Spring Data JPA, Hibernate 7 |
-| Banco de dados | PostgreSQL |
+| Banco de dados | PostgreSQL 18 |
 | Migrations | Flyway |
 | Build | Maven |
 
@@ -114,7 +114,7 @@ spring.jpa.open-in-view=false
 mvn spring-boot:run
 ```
 
-A API sobe em `http://localhost:8080`. As migrations do Flyway são aplicadas automaticamente na inicialização.
+A API sobe em `http://localhost:9090`. As migrations do Flyway são aplicadas automaticamente na inicialização.
 
 ---
 
@@ -125,10 +125,10 @@ A API sobe em `http://localhost:8080`. As migrations do Flyway são aplicadas au
 mvn test
 
 # apenas a verificação de fronteiras entre módulos
-mvn test -Dtest=ModularidadeTest
+mvn test -Dtest=TesteModularidade
 ```
 
-O `ModularidadeTest` usa o Spring Modulith para garantir que nenhum módulo acesse o interior de outro e que não existam dependências circulares. Ele não sobe a aplicação nem precisa do banco.
+O `TesteModularidade` usa o Spring Modulith para garantir que nenhum módulo acesse o interior de outro e que não existam dependências circulares. Ele não sobe a aplicação nem precisa do banco.
 
 ---
 
