@@ -1,4 +1,4 @@
 package com.acadl.climora.identidade.infrastructure.web;
 
-public record ResponseDTO() {
+public class CadastroController {
 }
